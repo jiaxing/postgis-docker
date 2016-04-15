@@ -11,9 +11,11 @@ PostGIS.
 ## Feature:
 
 - Creates a user `GIS_USER` who owns the database `GIS_DB` with the password of
-`GIS_PASSWORD`. The varialbes are customizable by defining the environment variables.
+`GIS_PASSWORD`.
 - Create the hstore extensions in `GIS_DB`.
 - Create the PostGIS extensions in `GIS_DB`.
+- Overwrite the default `pg_hba.conf` with the file at path `PG_HBA_CONF_FILE` and
+`postgresql.conf` with the file at path `POSTGRESQL_CONF_FILE`.
 
 ## How-To:
 

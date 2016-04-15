@@ -9,8 +9,9 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 ENV GIS_USER="gis" GIS_DB="gis" GIS_PASSWORD=""
+ENV PG_HBA_CONF_FILE="/docker-entrypoint-initdb.d/pg_hba.conf"
+ENV POSTGRESQL_CONF_FILE="/docker-entrypoint-initdb.d/postgresql.conf"
 
 RUN mkdir -p /docker-entrypoint-initdb.d
-
-COPY ./1-create-gis-database.sh /docker-entrypoint-initdb.d/1-create-gis-user.sh
-COPY ./2-create-gis-extension.sh /docker-entrypoint-initdb.d/2-create-gis-extension.sh
+COPY ./*.sh  /docker-entrypoint-initdb.d/
+COPY ./*.conf /docker-entrypoint-initdb.d/
