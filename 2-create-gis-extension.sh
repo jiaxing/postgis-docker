@@ -2,6 +2,7 @@
 set -e
 
 psql -v ON_ERROR_STOP=1 --dbname="$GIS_DB" --username "$POSTGRES_USER" <<-EOSQL
+  CREATE EXTENSION hstore;
   CREATE EXTENSION postgis;
   CREATE EXTENSION postgis_topology;
   CREATE EXTENSION fuzzystrmatch;

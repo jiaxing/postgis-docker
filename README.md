@@ -12,6 +12,7 @@ PostGIS.
 
 - Creates a user `GIS_USER` who owns the database `GIS_DB` with the password of
 `GIS_PASSWORD`. The varialbes are customizable by defining the environment variables.
+- Create the hstore extensions in `GIS_DB`.
 - Create the PostGIS extensions in `GIS_DB`.
 
 ## How-To:
