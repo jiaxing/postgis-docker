@@ -1,7 +1,7 @@
 # postgis-docker
 
-Dockerfiles for the [`jaysong/postgis`](https://hub.docker.com/r/jaysong/postgis/) images
-on the Docker Hub which provices a Docker container running Postgres and PostGIS.
+Dockerfiles for the [`jaysong/postgis`](https://hub.docker.com/r/jaysong/postgis/) Docker
+Hub images which contains Postgres with PostGIS extensions.
 The images are based on the official
 [`postgres`](https://registry.hub.docker.com/_/postgres/) image.
 
