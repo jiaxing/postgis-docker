@@ -8,7 +8,7 @@ RUN apt-get update \
        postgis=$POSTGIS_VERSION \
   && rm -rf /var/lib/apt/lists/*
 
-ENV GIS_USER="gis" GIS_DB="gis" GIS_PASSWORD=""
+ENV GIS_USER="gis" GIS_DB="gis" GIS_SCHEMA="gis" GIS_PASSWORD=""
 ENV PG_HBA_CONF_FILE="/docker-entrypoint-initdb.d/pg_hba.conf"
 ENV POSTGRESQL_CONF_FILE="/docker-entrypoint-initdb.d/postgresql.conf"
 
